@@ -1,0 +1,12 @@
+<%- include('partials/header') %>
+
+        <h2>Liste des Pokemons</h2>
+        <ul class="cards">
+            <% for(const pokemon of pokemonList){ %>
+                <li class="card card--label">
+                    <a href="/promo/<%= promo.id %>"><%= promo.name%></a>
+                </li>
+            <% } %>
+        </ul>
+
+<%- include('partials/footer') %>

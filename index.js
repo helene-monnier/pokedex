@@ -1,6 +1,6 @@
 require('dotenv').config();
 const express = require('express');
-const router = require('./APP/router');
+const router = require('./app/router');
 
 // je configure express
 const app = express();
@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 3000;
 
 // je configure les liens vers mes fichiers views
 app.set('view engine', 'ejs');
-app.set('views', './APP/views');
+app.set('views', './app/views');
 
 
 // Je configure le lien vers le dossier public
