@@ -25,7 +25,9 @@ app.use(router);
 
 // je configure le lien vers la page 404
 app.use((req, res) => {
-  res.status(404).render('404');
+  res.status(404).render('errors/404', {
+    title:"Page non trouvée, continues ta chasse !"
+  });
 });
 
 // je lance le server

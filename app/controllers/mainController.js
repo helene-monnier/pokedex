@@ -1,6 +1,8 @@
 const mainController = {
     displayHome(req, res) {
-      res.render('index');
+      res.render('index', {
+        title:"Pokedex complet en français"
+      });
     },
   };
   
