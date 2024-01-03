@@ -1,23 +1,41 @@
 <%- include('partials/header') %>
 
-    <h1> <%= title %> </h1>
-        
-    <div id="pokemon-carrousel">
-        <div id="pokemon-carrousel__holder">
+    <section id="pres">
+            <h1> <%= title %> </h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, facilis sunt! Perferendis aut labore quod esse unde blanditiis optio odio ex cupiditate reiciendis. Vitae temporibus fugit blanditiis non dicta illum.</p>
+    </section>
+
+    <section  id="pokemon-carrousel">
+        <article id="pokemon-carrousel__holder">
             <% pokemon.forEach( (pokemon) => { %>
-                <a href="/pokemon/:pokedexId" class="pokemon-card">
-                    <img src="<%= pokemon.sprite_regular %>" alt="pokemon-img">
+                <a href="/pokemon/<%=pokemon.id%>" class="pokemon-card">
+                    <img src="<%= pokemon.sprite_regular %>" alt="pokemon-img" loading="lazy">
                     <p><%= pokemon.name_fr %></p>
                     <p><%= pokemon.category %></p>
                 </a>
             <% }) %>
-        </div>
-
-    </div>
-
-    <div class="main__search">
+        </article>
+    </section>   
+    
+    <section class="main__search">
         <input type="search" id="site-search" name="q" />
         <button><i class="fa-solid fa-magnifying-glass"></i></button>
-    </div>
+    </section>
+
+    <section class="tableau">
+        <table>
+            <thead>
+              <tr>
+                <th colspan="2">Liste complète des pokemon</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>The table body</td>
+                <td>with two columns</td>
+              </tr>
+            </tbody>
+          </table>
+    </section>
 
 <%- include('partials/footer') %>

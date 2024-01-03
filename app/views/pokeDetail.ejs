@@ -1,14 +1,14 @@
-<%- include('../partials/header') %>
+<%- include('partials/header') %>
 
-    <h1> <%= title %> </h1>
+    <h1> <%= pokemon.name_fr %> </h1>
 
     <div class="presentation">
-        <img src="#" alt="">
+        <img src="<%= pokemon.sprite_regular %>" alt="<%= pokemon.name_fr %>-img">
         <div>
-            <h2>Présentation de name </h2>
+            <h2>Présentation de <%= pokemon.name_fr %></h2>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic repellat, iusto amet asperiores dolor ea sequi enim necessitatibus esse nisi deleniti? Animi reiciendis esse culpa similique fuga architecto, totam nisi!</p>
         </div>
     </div>
         
 
-<%- include('../partials/footer') %>
+<%- include('partials/footer') %>

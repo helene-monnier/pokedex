@@ -7,9 +7,15 @@ const dataMapper = {
     return result.rows;
   },
 
-  async getOnePokemon(pokedexId) {
-    const query = 'SELECT * FROM pokemon WHERE pokedex_id = $1;';
-    const result = await database.query(query, [pokedexId]);
+  async getOnePokemon(pokemonId) {
+    const query = 'SELECT * FROM pokemon WHERE id = $1;';
+    const result = await database.query(query, [pokemonId]);
+    return result.rows[0];
+  },
+
+  async getOnePokemonRandom() {
+    const query = 'SELECT * FROM pokemon ORDER BY RANDOM() LIMIT 1;';
+    const result = await database.query(query);
     return result.rows[0];
   },
 };

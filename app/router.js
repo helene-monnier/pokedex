@@ -1,9 +1,10 @@
 const { Router } = require('express');
-const mainController = require('./controllers/mainController');
+const homeController = require('./controllers/homeController');
+const detailController = require('./controllers/detailController');
 
 const router = Router();
 
-router.get('/', mainController.displayHomePage);
-router.get('/pokemon/:pokedex_id', mainController.displayDetailPage);
+router.get('/', homeController.displayHomePage);
+router.get('/pokemon/:id', detailController.displayDetailPage);
 
 module.exports = router;

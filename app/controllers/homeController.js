@@ -15,10 +15,10 @@ const mainController = {
   },
 
   displayDetailPage: async (req, res, next) => {
-    const { pokedexId } = req.params;
+    const { id } = req.params;
 
     try {
-      const pokemonFound = await dataMapper.getOnePokemon(pokedexId);
+      const pokemonFound = await dataMapper.getOnePokemon(id);
 
       if (!pokemonFound) {
         next();
