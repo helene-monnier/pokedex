@@ -62,6 +62,7 @@ h1 {
 #pokemon-carrousel__holder {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .pokemon-card {
