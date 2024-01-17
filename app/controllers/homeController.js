@@ -1,32 +1,13 @@
 const dataMapper = require('../models/dataMapper');
 
-const mainController = {
+const homeController = {
   displayHomePage: async (req, res) => {
     try {
-      const pokemon = await dataMapper.getAllPokemon();
+      const pokemonRandom = await dataMapper.getAllPokemonRandom();
+
       res.render('index', {
-        pokemon,
+        pokemonRandom,
         title: 'Pokedex complet en français',
-      });
-    } catch (error) {
-      console.error(error);
-      res.status(500).send(`An error occured with the database :\n${error.message}`);
-    }
-  },
-
-  displayDetailPage: async (req, res, next) => {
-    const { id } = req.params;
-
-    try {
-      const pokemonFound = await dataMapper.getOnePokemon(id);
-
-      if (!pokemonFound) {
-        next();
-        return;
-      }
-      res.render('pokeDetail', {
-        title: 'pokemon.name_fr',
-        pokemon: pokemonFound,
       });
     } catch (error) {
       console.error(error);
@@ -36,4 +17,4 @@ const mainController = {
 
 };
 
-module.exports = mainController;
+module.exports = homeController;

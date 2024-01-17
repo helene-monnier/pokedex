@@ -2,13 +2,16 @@
 
     <h1> <%= pokemon.name_fr %> </h1>
 
-    <div class="presentation">
+    <section class="presentation">
         <img src="<%= pokemon.sprite_regular %>" alt="<%= pokemon.name_fr %>-img">
-        <div>
-            <h2>Présentation de <%= pokemon.name_fr %></h2>
+        <div class="presentation__text">
+            <h2>Présentation de <%= pokemon.name_fr %> / <%= pokemon.name_jp %> / <%= pokemon.name_en %></h2>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic repellat, iusto amet asperiores dolor ea sequi enim necessitatibus esse nisi deleniti? Animi reiciendis esse culpa similique fuga architecto, totam nisi!</p>
+            <div class="talents">bla</div>
+            <div class="type">bla </div>
+            <div class="stat">bla </div>
         </div>
-    </div>
+    </section>
         
 
 <%- include('partials/footer') %>

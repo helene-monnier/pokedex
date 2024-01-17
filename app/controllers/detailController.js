@@ -12,9 +12,9 @@ const detailController = {
         return;
       }
       res.render('pokeDetail', {
-        title: 'pokemon.name_fr',
         pokemon: pokemonFound,
       });
+
     } catch (error) {
       console.error(error);
       res.status(500).send(`An error occured with the database :\n${error.message}`);

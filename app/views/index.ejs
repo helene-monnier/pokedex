@@ -7,7 +7,7 @@
 
     <section  id="pokemon-carrousel">
         <article id="pokemon-carrousel__holder">
-            <% pokemon.forEach( (pokemon) => { %>
+            <% pokemonRandom.forEach( (pokemon) => { %>
                 <a href="/pokemon/<%=pokemon.id%>" class="pokemon-card">
                     <img src="<%= pokemon.sprite_regular %>" alt="pokemon-img" loading="lazy">
                     <p><%= pokemon.name_fr %></p>
